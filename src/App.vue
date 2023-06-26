@@ -1,5 +1,6 @@
 <script setup>
   import { RouterView } from 'vue-router'
+  import PokeHeader from './components/PokeHeader.vue'
 </script>
 
 <!--Header 
@@ -12,7 +13,8 @@
 -->
 
 <template>
-  <RouterView />
+    <PokeHeader/>
+    <RouterView />
 </template>
 
 <!-- <style scoped>
