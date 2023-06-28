@@ -1,13 +1,13 @@
 <script>
-import { fetchData } from '../services/apiPokemon.vue';
+import { fetchData } from "../services/apiPokemon.vue";
 
 fetchData();
 export default {
   data() {
     return {
-      pokeImg: '',
-      pokeNumber: '',
-      pokeName: ''
+      pokeImg: "",
+      pokeNumber: "",
+      pokeName: "",
     };
   },
   mounted() {
@@ -16,14 +16,13 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
-        const data = await response.json();
+        const randomPokemonIndex = Math.floor(Math.random() * 1010) + 1;
 
-        const randomPokemonIndex = Math.floor(Math.random() * data.results.length);
-        const pokemon = data.results[randomPokemonIndex];
+        const response = await fetch(
+          "https://pokeapi.co/api/v2/pokemon/" + randomPokemonIndex
+        );
 
-        const pokemonResponse = await fetch(pokemon.url);
-        const pokemonData = await pokemonResponse.json();
+        const pokemonData = await response.json();
 
         this.pokeImg = pokemonData.sprites.front_default;
         this.pokeNumber = `# ${pokemonData.id}`;
@@ -32,46 +31,23 @@ export default {
         console.error(error);
       }
     },
-    //async changePokemon() {
-      //await this.fetchData();
-    //}
-  }
-}
-
-
-
-
+  },
+};
 </script>
-    
-
-
-
-
 
 <template>
-    <div class="poke-container" id="poke-container">
-
-        <div class="pokemon" @click="changePokemon">
-            <div class="img-container">
-              <img :src="pokeImg" alt="" id="poke-img">
-            </div>
-            <div class="info">
-              <span class="number" id="poke-munber">{{ pokeNumber }}</span>
-              <h3 class="name" id="poke-name">{{ pokeName }}</h3>
-              
-            </div>
-        </div>
-   
-    </div>     
+  <div class="poke-container" id="poke-container">
+    <div class="pokemon" @click="changePokemon">
+      <div class="img-container">
+        <img :src="pokeImg" alt="" id="poke-img" />
+      </div>
+      <div class="info">
+        <span class="number" id="poke-munber">{{ pokeNumber }}</span>
+        <h3 class="name" id="poke-name">{{ pokeName }}</h3>
+      </div>
+    </div>
+  </div>
 </template>
-
-
-
-
-
-
-
-
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400&display=swap");
@@ -80,21 +56,15 @@ export default {
   box-sizing: border-box;
 }
 
-
-
 h1 {
   letter-spacing: 3px;
 }
 
 .poke-container {
-   
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
 }
-
 
 .card-row {
   display: flex;
@@ -103,7 +73,7 @@ h1 {
 }
 
 .pokemon {
-  background-color: rgb(222,253,224);
+  background-color: rgb(222, 253, 224);
   border-radius: 10px;
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   margin: 10px;
@@ -117,13 +87,11 @@ h1 {
   width: 120px;
   height: 120px;
   text-align: center;
- 
 }
 
 .pokemon .img-container img {
   max-width: 90%;
   margin-top: 20px;
- 
 }
 
 .pokemon .info {
@@ -143,8 +111,7 @@ h1 {
   text-transform: capitalize;
 }
 
-
-img{
+img {
   max-width: 100%;
 }
 
@@ -235,7 +202,4 @@ width: 150px;
  border-radius: 5px;
  cursor: pointer;
 }*/
-
-
-
 </style>

@@ -5,7 +5,7 @@ const numberOfCards = 20;
 
 <template>
   <main>
-    <!-- card poke, bucle for 1 tarjeta por cada pokemon-->
+    
     <div class="pipi">
       <CardPoke v-for="index in numberOfCards" :key="index" />
     </div>
