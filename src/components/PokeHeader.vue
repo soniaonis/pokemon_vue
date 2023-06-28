@@ -2,6 +2,7 @@
 import { fetchData } from '../services/apiPokemon.vue';
 
 fetchData();
+
 </script>
 
 <template>
@@ -24,11 +25,13 @@ fetchData();
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
         padding: 1%;
     }
+
     #RightSide {
         display: flex;
         align-items: center;
         gap: 1%;
-        height: 10%;
+        height: 100%;
     }
 
 </style>
+
