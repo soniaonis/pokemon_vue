@@ -1,10 +1,8 @@
 <script setup>
-import { fetchData } from '../services/apiPokemon.vue';
-
-fetchData();
+import DetailsPoke from '../components/DetailsPoke.vue';
 </script>
 
 
 <template>
-    <h1>Esto es la vista de detail cards</h1>
+    <DetailsPoke/>
 </template>
