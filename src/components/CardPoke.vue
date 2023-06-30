@@ -1,5 +1,5 @@
 <script>
-import { fetchData } from "../services/apiPokemon.vue";
+import { fetchData } from '../services/ApiPokemon.vue';
 
 fetchData();
 export default {
@@ -115,91 +115,4 @@ img {
   max-width: 100%;
 }
 
-/*body{
-  background: #EFEFBB;
-background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-background: linear-gradient(to right, #D4D3DD, #EFEFBB);
-}*/
-
-/*.pokedex__header{
-  background: rgb(23, 32, 48);
-  min-height: 200px;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
- flex-direction: column;
- padding: 10px;
-}
-
-.pokedex__header-title{
-  color: rgb(127, 138, 163);
-  margin:0 25px 0 10px ;
-  text-align: left ;
-}
-
-.pokedex__header-search{
-  margin: auto;
-}
-
-.pokedex__header-search form{
-  border-color: blue;
-  display: flex;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.pokedex__header-search input{
-  height: 30px;
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-}
-
-.pokedex__header-search form button{
-  width: 80px;
-  height: 80px;
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.pokedex__header-aline{
-display: flex;  
-width: 150px;
-}
-
-.arrow-left{
-  width: 0;
-  height: 0;
- border-top: 15px solid rgba(255, 0, 0, 0);
- border-left: 15px solid rgba(49, 173, 18, 0);
- border-bottom: 15px solid rgba(255, 251, 0, 0);
- border-right: 15px solid rgb(97, 221, 159);
- border-radius: 5px;
- cursor: pointer;
-}
-
-.order{
-  margin: auto;
-  padding: 5px;
-  color: #fff;
-}
-
-.arrow-right{
-  width: 0;
-  height: 0;
- border-top: 15px solid rgba(255, 0, 0, 0);
- border-left: 15px solid rgb(97, 221, 159);;
- border-bottom: 15px solid rgba(255, 251, 0, 0);
- border-right: 15px solid rgba(255, 0, 0, 0);
- border-radius: 5px;
- cursor: pointer;
-}*/
 </style>

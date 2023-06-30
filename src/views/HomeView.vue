@@ -5,11 +5,9 @@ const numberOfCards = 20;
 
 <template>
   <main>
-    
     <div class="pipi">
       <CardPoke v-for="index in numberOfCards" :key="index" />
     </div>
-   
   </main>
 </template>
 
