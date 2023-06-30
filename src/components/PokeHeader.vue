@@ -1,5 +1,5 @@
 <script setup>
-import { fetchData } from '../services/apiPokemon.vue';
+import { fetchData } from '../services/ApiPokemon.vue';
 
 fetchData();
 
@@ -21,7 +21,8 @@ fetchData();
     header {
         width: 100vw;
         height: 12vh;
-        background-color: blue;
+        background-color: rgb(14, 180, 53);
+        color: white;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
         padding: 1%;
     }
@@ -30,6 +31,10 @@ fetchData();
         display: flex;
         align-items: center;
         gap: 1%;
+        height: 100%;
+    }
+
+    #RightSide img {
         height: 100%;
     }
 
